@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About — Stay Black',
-  description: 'Why Stay Black exists: the polyester problem, our mission, and the materials that make black stay black.',
+  title: 'About — VERO',
+  description: 'Why VERO exists: the truth about synthetic fabrics, our mission for material honesty, and the natural fibers that make the difference.',
 };
 
 export default function AboutPage() {
@@ -15,14 +14,14 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-6">Our Story</p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-            We built Stay Black because<br />
-            <span className="text-gray-400">nothing else existed.</span>
+            VERO means true.<br />
+            <span className="text-gray-400">That&apos;s the entire philosophy.</span>
           </h1>
           <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
-            The founder tried every gym short on the market. Nero had beautiful minimal pockets but no zippers —
-            his iPhone Pro Max fell out at every airport, beach, and gym. Alo Yoga had zippers but they&apos;re made
-            of polyester and the zipper pulls are visible from a mile away. Lululemon was fine, until the research
-            on microplastics became undeniable.
+            We started VERO because we couldn&apos;t find a single men&apos;s basics brand that was honest about
+            materials. Every premium athletic brand uses polyester — a petrochemical plastic — and markets it
+            as &ldquo;performance.&rdquo; We believed men deserved the truth: that natural fibers outperform
+            synthetics in every way that matters for your body.
           </p>
         </div>
       </section>
@@ -32,23 +31,24 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="border-l-2 border-white/20 pl-8 py-4">
             <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-300">
-              &ldquo;If no brand makes what a health-conscious man who only wears black needs,
-              build it.&rdquo;
+              &ldquo;True materials. True to your body. True quality. That&apos;s what VERO means —
+              and it&apos;s the only standard we accept.&rdquo;
             </p>
           </div>
         </div>
       </section>
 
-      {/* The Problem with Polyester */}
+      {/* Why Synthetic Fabrics Are Harmful */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8">The Problem</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
-            The polyester problem is bigger than you think.
+            The synthetic fabric industry is lying to you.
           </h2>
           <p className="text-gray-400 leading-relaxed mb-12 max-w-2xl">
             The athleisure market is dominated by polyester. Most men wearing Lululemon, Vuori, or Alo are
-            unknowingly wearing petroleum-derived plastics against their skin every day.
+            unknowingly wearing petroleum-derived plastics against their skin every day. These brands
+            spend millions on marketing &ldquo;performance fabric&rdquo; — but performance for whom?
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -77,46 +77,48 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">The Fading Problem</h3>
+              <h3 className="text-xl font-semibold mb-4">The &ldquo;Recycled&rdquo; Myth</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Every man who loves black clothing knows the heartbreak: wash it a few times and it turns gray.
-                Most brands use cheap reactive dyes that rinse out immediately. We use fiber-reactive dyes with
-                mordant overdyeing — bonded at the molecular level. 200+ washes, still jet black.
+                Recycled polyester is still polyester. It still sheds microplastics. It still contains endocrine disruptors.
+                It still doesn&apos;t biodegrade. Some brands market it as sustainable — but recycling a plastic bottle
+                into a shirt just moves the problem from the ocean to your bloodstream.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Mission */}
+      {/* Why True Materials Matter */}
       <section className="bg-[#0a0a0a] py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8">Our Mission</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-12 leading-tight">
-            Healthy. Sustainable.<br />
-            <span className="text-gray-400">Black forever.</span>
+            True materials.<br />
+            <span className="text-gray-400">True to your body.</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Health is not optional</h3>
+              <h3 className="text-lg font-semibold mb-4">Material truth is non-negotiable</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Your clothing touches your skin more than anything else you own. We believe what you wear should be
-                as clean as what you eat. No synthetics. No petrochemicals. No compromise.
+                as clean as what you eat. No synthetics. No petrochemicals. No compromise. Every VERO product
+                is made from only natural fibers — bamboo rayon, organic cotton, and merino wool.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Quality over quantity</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 We make nine products. Not ninety. Every piece is designed to be the best version of itself —
-                bought once, worn for years, and still jet black when you&apos;re done.
+                bought once, worn for years, and still looking true when you&apos;re done.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">The uniform is black</h3>
+              <h3 className="text-lg font-semibold mb-4">Sustainability by design</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                We don&apos;t chase trends or seasonal colors. Black is the uniform. It&apos;s what you reach for
-                every morning without thinking. We make sure it stays that way.
+                Natural fibers biodegrade. They don&apos;t shed microplastics. They don&apos;t require petroleum.
+                Sustainability isn&apos;t a marketing angle for us — it&apos;s an inherent property of choosing
+                true materials over synthetic ones.
               </p>
             </div>
             <div>
@@ -130,8 +132,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Materials Overview */}
+      {/* The Black Collection */}
       <section className="py-24 px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8">The Launch</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+            The Black Collection
+          </h2>
+          <p className="text-gray-400 leading-relaxed mb-8 max-w-2xl">
+            We&apos;re launching with an all-black collection — because black is the foundation of every
+            man&apos;s wardrobe. It&apos;s what you reach for every morning without thinking.
+          </p>
+          <p className="text-gray-400 leading-relaxed mb-8 max-w-2xl">
+            But VERO isn&apos;t color-locked. True materials come in every color. Our launch proves the concept —
+            that natural fibers can outperform synthetics in every category. More colors are coming.
+          </p>
+          <p className="text-gray-400 leading-relaxed max-w-2xl">
+            We use fiber-reactive dyes with mordant overdyeing — bonded at the molecular level. 200+ washes,
+            still jet black. No other activewear brand offers that guarantee.
+          </p>
+        </div>
+      </section>
+
+      {/* Materials Overview */}
+      <section className="bg-[#0a0a0a] py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8">Our Materials</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-12 leading-tight">
@@ -179,7 +203,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="bg-[#0a0a0a] py-24 px-6 lg:px-12">
+      <section className="py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8">Certifications</p>
           <h2 className="text-3xl font-bold mb-12">Verified clean. From fiber to finished garment.</h2>

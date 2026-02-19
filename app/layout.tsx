@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "STAY BLACK — Healthy Fabrics That Never Fade",
+  title: "VERO — True Materials. Nothing Synthetic.",
   description:
-    "Premium men's basics made from bamboo, organic cotton, and merino wool. No polyester. No microplastics. Black that actually stays black.",
+    "Premium men's basics made from bamboo, organic cotton, and merino wool. No polyester. No microplastics. True materials for your body.",
   openGraph: {
-    title: "STAY BLACK — Healthy Fabrics That Never Fade",
+    title: "VERO — True Materials. Nothing Synthetic.",
     description:
-      "Premium men's basics. No polyester. No microplastics. Black that stays black.",
+      "Premium men's basics. No polyester. No microplastics. True to your body.",
     type: "website",
   },
 };

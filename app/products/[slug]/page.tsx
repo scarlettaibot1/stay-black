@@ -11,9 +11,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  if (!product) return { title: 'Product Not Found — Stay Black' };
+  if (!product) return { title: 'Product Not Found — VERO' };
   return {
-    title: `${product.name} — Stay Black`,
+    title: `${product.name} — VERO`,
     description: product.description,
   };
 }
@@ -210,7 +210,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="mt-8 border border-white/10 p-4 flex items-center gap-3">
               <span className="text-white text-lg">✦</span>
               <p className="text-xs text-gray-500 leading-relaxed">
-                <span className="font-semibold text-white">Natural Fabric Guarantee</span>
+                <span className="font-semibold text-white">True Materials Guarantee</span>
                 <span className="block">Zero polyester. Zero synthetic blends. Always.</span>
               </p>
             </div>

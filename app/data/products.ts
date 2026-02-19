@@ -156,7 +156,7 @@ export const products: Product[] = [
     price: 98,
     tagline: 'ZERO ITCH MERINO',
     description: '17.5μ superfine merino wool. Temperature regulating, odor resistant, wears for days.',
-    longDescription: 'The travel piece. 100% GOTS-certified merino wool at 17.5 microns — superfine enough that it feels like silk against skin, with zero itch. Merino naturally regulates temperature from air-conditioned airports to tropical beaches. It\'s naturally odor-resistant — wear it for days without washing. And merino fiber\'s natural crimp traps dye molecules deep in the fiber structure, making the Meridian the most fade-resistant piece in the entire Stay Black lineup. Flat-lock seams minimize bulk for layering.',
+    longDescription: 'The travel piece. 100% GOTS-certified merino wool at 17.5 microns — superfine enough that it feels like silk against skin, with zero itch. Merino naturally regulates temperature from air-conditioned airports to tropical beaches. It\'s naturally odor-resistant — wear it for days without washing. And merino fiber\'s natural crimp traps dye molecules deep in the fiber structure, making the Meridian the most fade-resistant piece in the entire VERO lineup. Flat-lock seams minimize bulk for layering.',
     fabric: '100% GOTS Merino Wool',
     fabricComposition: '17.5μ superfine ZQ-certified Merino from New Zealand. Zero itch guarantee.',
     weight: '150–165 gsm',

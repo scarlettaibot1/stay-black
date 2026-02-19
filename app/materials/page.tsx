@@ -2,19 +2,19 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Materials — Stay Black',
+  title: 'Materials — VERO',
   description: 'Deep dive into bamboo rayon, organic cotton, and merino wool — why we chose them and how they compare to polyester.',
 };
 
 const comparison = [
-  { property: 'Microplastic shedding', stayblack: 'Zero', polyester: 'Thousands of fibers per wash' },
-  { property: 'Endocrine disruptors', stayblack: 'None', polyester: 'BPA-adjacent chemicals' },
-  { property: 'Biodegradable', stayblack: 'Yes (months–years)', polyester: 'No (200+ years)' },
-  { property: 'Odor resistance', stayblack: 'Natural (merino/bamboo)', polyester: 'Chemical treatment required' },
-  { property: 'Moisture wicking', stayblack: 'Natural fiber properties', polyester: 'Synthetic coating' },
-  { property: 'Temperature regulation', stayblack: 'Active (merino)', polyester: 'Traps heat' },
-  { property: 'Black color retention', stayblack: '200+ washes', polyester: '20–50 washes' },
-  { property: 'Skin irritation', stayblack: 'Hypoallergenic', polyester: 'Common irritant' },
+  { property: 'Microplastic shedding', vero: 'Zero', polyester: 'Thousands of fibers per wash' },
+  { property: 'Endocrine disruptors', vero: 'None', polyester: 'BPA-adjacent chemicals' },
+  { property: 'Biodegradable', vero: 'Yes (months–years)', polyester: 'No (200+ years)' },
+  { property: 'Odor resistance', vero: 'Natural (merino/bamboo)', polyester: 'Chemical treatment required' },
+  { property: 'Moisture wicking', vero: 'Natural fiber properties', polyester: 'Synthetic coating' },
+  { property: 'Temperature regulation', vero: 'Active (merino)', polyester: 'Traps heat' },
+  { property: 'Black color retention', vero: '200+ washes', polyester: '20–50 washes' },
+  { property: 'Skin irritation', vero: 'Hypoallergenic', polyester: 'Common irritant' },
 ];
 
 export default function MaterialsPage() {
@@ -29,7 +29,7 @@ export default function MaterialsPage() {
             <span className="text-gray-400">matters more than you think.</span>
           </h1>
           <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
-            Every Stay Black product is made from one of three natural fibers: bamboo rayon, organic cotton,
+            Every VERO product is made from one of three natural fibers: bamboo rayon, organic cotton,
             or merino wool. No polyester. No nylon. No acrylic. Ever.
           </p>
         </div>
@@ -122,14 +122,14 @@ export default function MaterialsPage() {
                 ethical and sustainable wool production. At 17.5 microns, it&apos;s classified as superfine —
                 finer than human hair and completely itch-free against skin. Merino fiber&apos;s natural crimp
                 structure traps dye molecules deep within the fiber, making it the most fade-resistant
-                material in the Stay Black lineup.
+                material in the VERO lineup.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {[
                   '17.5μ superfine — zero itch',
                   'Natural temperature regulation',
                   'Odor resistant for days',
-                  'Superior black retention',
+                  'Superior color retention',
                   'ZQ ethical certification',
                   'GOTS certified',
                   'Wrinkle resistant',
@@ -150,14 +150,14 @@ export default function MaterialsPage() {
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8">Comparison</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Stay Black vs. Polyester</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">VERO vs. Polyester</h2>
 
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-white/10">
                   <th className="text-left py-4 pr-8 text-gray-400 text-xs tracking-[0.1em] uppercase">Property</th>
-                  <th className="text-left py-4 pr-8 text-white text-xs tracking-[0.1em] uppercase">Stay Black</th>
+                  <th className="text-left py-4 pr-8 text-white text-xs tracking-[0.1em] uppercase">VERO</th>
                   <th className="text-left py-4 text-gray-500 text-xs tracking-[0.1em] uppercase">Polyester</th>
                 </tr>
               </thead>
@@ -165,7 +165,7 @@ export default function MaterialsPage() {
                 {comparison.map((row) => (
                   <tr key={row.property} className="border-b border-white/5">
                     <td className="py-4 pr-8 text-gray-400">{row.property}</td>
-                    <td className="py-4 pr-8 text-white">{row.stayblack}</td>
+                    <td className="py-4 pr-8 text-white">{row.vero}</td>
                     <td className="py-4 text-gray-600">{row.polyester}</td>
                   </tr>
                 ))}
@@ -179,7 +179,7 @@ export default function MaterialsPage() {
       <section className="bg-[#0a0a0a] py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-8">Color Technology</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">How black stays black.</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">How true color lasts.</h2>
           <p className="text-gray-400 leading-relaxed mb-8 max-w-2xl">
             Most brands use a single reactive dye bath. We use a multi-step process:
           </p>
@@ -200,7 +200,7 @@ export default function MaterialsPage() {
             ))}
           </ol>
           <p className="text-gray-500 text-sm mt-10">
-            Result: verified by independent textile labs to maintain true black through 200+ wash cycles.
+            Result: verified by independent textile labs to maintain true color through 200+ wash cycles.
           </p>
         </div>
       </section>

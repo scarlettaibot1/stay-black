@@ -27,7 +27,7 @@ export default function Nav() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
         <Link href="/" className="text-lg font-bold tracking-[0.3em] hover:text-gray-300 transition-colors">
-          STAY BLACK
+          VERO
         </Link>
 
         {/* Desktop links */}

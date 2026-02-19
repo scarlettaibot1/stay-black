@@ -10,7 +10,7 @@ export default function WaitlistForm() {
     return (
       <div className="border border-white/10 p-8 max-w-lg mx-auto">
         <p className="text-lg font-semibold mb-2">You&apos;re in.</p>
-        <p className="text-gray-400 text-sm">We&apos;ll email you when we launch. Stay black.</p>
+        <p className="text-gray-400 text-sm">We&apos;ll email you when we launch. True to your body.</p>
       </div>
     );
   }

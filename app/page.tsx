@@ -11,7 +11,7 @@ const featuredProducts = products.filter((p) =>
 const materials = [
   { name: 'Bamboo Rayon', desc: 'Naturally antibacterial, softer than cotton, moisture-wicking without synthetics' },
   { name: 'Organic Cotton', desc: 'GOTS certified, no pesticides, breathable and durable' },
-  { name: 'Merino Wool', desc: 'Temperature regulating, odor resistant, superior black retention' },
+  { name: 'Merino Wool', desc: 'Temperature regulating, odor resistant, superior color retention' },
 ];
 
 export default function Home() {
@@ -36,10 +36,10 @@ export default function Home() {
             Launching 2026
           </p>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-[0.15em] mb-6">
-            STAY BLACK
+            VERO
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto mb-4">
-            Healthy fabrics that never fade.
+            True Materials. Nothing Synthetic.
           </p>
           <p className="text-sm text-gray-500 max-w-md mx-auto mb-12">
             Premium men&apos;s basics made from bamboo, organic cotton, and merino wool.
@@ -73,7 +73,7 @@ export default function Home() {
         <div className="flex whitespace-nowrap animate-[marquee_25s_linear_infinite]">
           {Array(6).fill(null).map((_, i) => (
             <span key={i} className="text-black text-xs tracking-widest uppercase mx-8 font-semibold">
-              No Polyester &nbsp;·&nbsp; Bamboo Rayon &nbsp;·&nbsp; Organic Cotton &nbsp;·&nbsp; Merino Wool &nbsp;·&nbsp; OEKO-TEX &nbsp;·&nbsp; GOTS Certified &nbsp;·&nbsp; Hidden Zippers &nbsp;·&nbsp; Stays Black Forever &nbsp;·&nbsp;
+              No Polyester &nbsp;·&nbsp; Bamboo Rayon &nbsp;·&nbsp; Organic Cotton &nbsp;·&nbsp; Merino Wool &nbsp;·&nbsp; OEKO-TEX &nbsp;·&nbsp; GOTS Certified &nbsp;·&nbsp; Hidden Zippers &nbsp;·&nbsp; True Materials &nbsp;·&nbsp;
             </span>
           ))}
         </div>
@@ -83,8 +83,9 @@ export default function Home() {
       <section className="bg-[#0a0a0a] py-24 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-4">The Collection</p>
+            <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-4">The Black Collection</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">Featured Products</h2>
+            <p className="text-gray-500 text-sm mt-4">Our launch collection. More colors coming soon.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProducts.map((product) => (
@@ -171,7 +172,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Black That Fades</h3>
+              <h3 className="text-xl font-semibold mb-4">True Color Retention</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Cheap reactive dyes wash out within months. We use fiber-reactive dyes with
                 mordant overdyeing — bonded at the molecular level. 200+ washes, still jet black.
@@ -197,7 +198,7 @@ export default function Home() {
             Zero synthetics. Ever.
           </h2>
           <p className="text-gray-400 mb-16 max-w-xl mx-auto">
-            Every Stay Black product is made from natural fibers — certified safe by OEKO-TEX and GOTS.
+            Every VERO product is made from natural fibers — certified safe by OEKO-TEX and GOTS.
           </p>
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             {materials.map((mat) => (
