@@ -98,38 +98,104 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
 
-            {/* Size Guide placeholder */}
+            {/* Size Guide — category-specific */}
             <div className="border-t border-white/10 pt-8 mb-10">
               <h3 className="text-xs tracking-[0.2em] uppercase text-gray-400 mb-4">Sizing</h3>
-              <p className="text-gray-500 text-sm mb-4">Available in XS–XXL. Runs true to size with an athletic fit.</p>
+              <p className="text-gray-500 text-sm mb-4">
+                {product.category === 'shorts' && 'Runs true to size with a relaxed athletic fit. Outseam measured from waistband to hem.'}
+                {product.category === 'tshirts' && 'Runs true to size with a relaxed fit. Length measured from highest point of shoulder to hem.'}
+                {product.category === 'longsleeves' && 'Runs true to size with a fitted-but-not-tight cut. Length measured from highest point of shoulder to hem.'}
+                {product.category === 'joggers' && 'Runs true to size with a tapered fit. Inseam measured from crotch to ankle cuff.'}
+                {product.category === 'pants' && 'Runs true to size. Inseam measured from crotch to hem. Available in regular inseam; tall coming soon.'}
+              </p>
               <div className="overflow-x-auto">
-                <table className="text-xs text-gray-500 w-full">
-                  <thead>
-                    <tr className="border-b border-white/10">
-                      <th className="text-left py-2 pr-4 text-gray-400">Size</th>
-                      <th className="text-left py-2 pr-4">Chest</th>
-                      <th className="text-left py-2 pr-4">Waist</th>
-                      <th className="text-left py-2">Hip</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      ['XS', '34–36"', '28–30"', '34–36"'],
-                      ['S', '36–38"', '30–32"', '36–38"'],
-                      ['M', '38–40"', '32–34"', '38–40"'],
-                      ['L', '40–42"', '34–36"', '40–42"'],
-                      ['XL', '42–44"', '36–38"', '42–44"'],
-                      ['XXL', '44–46"', '38–40"', '44–46"'],
-                    ].map(([size, chest, waist, hip]) => (
-                      <tr key={size} className="border-b border-white/5">
-                        <td className="py-2 pr-4 text-gray-400">{size}</td>
-                        <td className="py-2 pr-4">{chest}</td>
-                        <td className="py-2 pr-4">{waist}</td>
-                        <td className="py-2">{hip}</td>
+                {product.category === 'shorts' && (
+                  <table className="text-xs text-gray-500 w-full">
+                    <thead>
+                      <tr className="border-b border-white/10">
+                        <th className="text-left py-2 pr-4 text-gray-400">Size</th>
+                        <th className="text-left py-2 pr-4">Waist</th>
+                        <th className="text-left py-2 pr-4">Hip</th>
+                        <th className="text-left py-2">Outseam</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {[
+                        ['XS', '28–30"', '34–36"', product.slug.includes('5') ? '14"' : product.slug.includes('running') ? '13"' : '17"'],
+                        ['S', '30–32"', '36–38"', product.slug.includes('5') ? '14.5"' : product.slug.includes('running') ? '13.5"' : '17.5"'],
+                        ['M', '32–34"', '38–40"', product.slug.includes('5') ? '15"' : product.slug.includes('running') ? '14"' : '18"'],
+                        ['L', '34–36"', '40–42"', product.slug.includes('5') ? '15.5"' : product.slug.includes('running') ? '14.5"' : '18.5"'],
+                        ['XL', '36–38"', '42–44"', product.slug.includes('5') ? '16"' : product.slug.includes('running') ? '15"' : '19"'],
+                        ['XXL', '38–40"', '44–46"', product.slug.includes('5') ? '16.5"' : product.slug.includes('running') ? '15.5"' : '19.5"'],
+                      ].map(([size, waist, hip, outseam]) => (
+                        <tr key={size} className="border-b border-white/5">
+                          <td className="py-2 pr-4 text-gray-400">{size}</td>
+                          <td className="py-2 pr-4">{waist}</td>
+                          <td className="py-2 pr-4">{hip}</td>
+                          <td className="py-2">{outseam}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+                {(product.category === 'tshirts' || product.category === 'longsleeves') && (
+                  <table className="text-xs text-gray-500 w-full">
+                    <thead>
+                      <tr className="border-b border-white/10">
+                        <th className="text-left py-2 pr-4 text-gray-400">Size</th>
+                        <th className="text-left py-2 pr-4">Chest</th>
+                        <th className="text-left py-2 pr-4">Body Length</th>
+                        {product.category === 'longsleeves' && <th className="text-left py-2">Sleeve Length</th>}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        ['XS', '36"', '27"', '32"'],
+                        ['S', '38"', '28"', '33"'],
+                        ['M', '40"', '29"', '34"'],
+                        ['L', '42"', '30"', '35"'],
+                        ['XL', '44"', '31"', '36"'],
+                        ['XXL', '46"', '32"', '37"'],
+                      ].map(([size, chest, length, sleeve]) => (
+                        <tr key={size} className="border-b border-white/5">
+                          <td className="py-2 pr-4 text-gray-400">{size}</td>
+                          <td className="py-2 pr-4">{chest}</td>
+                          <td className="py-2 pr-4">{length}</td>
+                          {product.category === 'longsleeves' && <td className="py-2">{sleeve}</td>}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+                {(product.category === 'joggers' || product.category === 'pants') && (
+                  <table className="text-xs text-gray-500 w-full">
+                    <thead>
+                      <tr className="border-b border-white/10">
+                        <th className="text-left py-2 pr-4 text-gray-400">Size</th>
+                        <th className="text-left py-2 pr-4">Waist</th>
+                        <th className="text-left py-2 pr-4">Hip</th>
+                        <th className="text-left py-2">Inseam</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        ['XS', '28–30"', '34–36"', product.category === 'joggers' ? '28"' : '30"'],
+                        ['S', '30–32"', '36–38"', product.category === 'joggers' ? '29"' : '31"'],
+                        ['M', '32–34"', '38–40"', product.category === 'joggers' ? '30"' : '32"'],
+                        ['L', '34–36"', '40–42"', product.category === 'joggers' ? '31"' : '33"'],
+                        ['XL', '36–38"', '42–44"', product.category === 'joggers' ? '31"' : '33"'],
+                        ['XXL', '38–40"', '44–46"', product.category === 'joggers' ? '32"' : '34"'],
+                      ].map(([size, waist, hip, inseam]) => (
+                        <tr key={size} className="border-b border-white/5">
+                          <td className="py-2 pr-4 text-gray-400">{size}</td>
+                          <td className="py-2 pr-4">{waist}</td>
+                          <td className="py-2 pr-4">{hip}</td>
+                          <td className="py-2">{inseam}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
               </div>
             </div>
 
